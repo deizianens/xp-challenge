@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Front-end Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o teste
 
-## Available Scripts
+O desafio utiliza as API’s do Spotify. Features:
 
-In the project directory, you can run:
+- Possibilidade de inserir o nome da música ou album e obter uma lista;
+- Caso um album seja procurado e retornado, quando selecionado o album, usuário será direcionado a lista de música desse album.
+- Tocar o preview da música.
 
-### `yarn start`
+### Sobre o projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Projeto feito com React;
+- Não faz uso de nenhum CSS Framework (Bootstrap, PureCss, etc.);
+- Para rodar a aplicação faça: **yarn/npm** start;
+- A aplicação deve solicitar o token que será utilizado para realizar as requisições para a API;
+- Persistencia do **TOKEN**, quando expirado solicitar o token novo;
+- Testes escritos com _react testing library e jest_
+- A aplicação passará por 3 ambientes, DSV - HML - PRD, com build e uso variaveis de ambiente.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Visual & Funcionalidades
 
-### `yarn test`
+Quando o usuário entrar na aplicação ele deve poder buscar por um album ou música. Quando realizar a busca ele deve conseguir ver todos os albuns do artista e pode interagir indo para a página do album, utilizando a url **/albums/{artist}**, por exemplo: **/albums/mc-kevinho**. Ele deve conseguir voltar para essa página com o resultado da busca atual.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Quando estiver em uma tela de album ele deve ver as musicas e conseguir ouvir uma prévia da música que ele escolher, caso ele pause a música deve continuar de onde parou. O usuário tem um feedback para mostrar qual música está tocando.
 
-### `yarn build`
+### Tela principal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](https://github.com/rodyrafa/challenge/raw/master/imgs/home_1.jpg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](https://github.com/rodyrafa/challenge/raw/master/imgs/home_2.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tela de album
 
-### `yarn eject`
+![](https://github.com/rodyrafa/challenge/raw/master/imgs/list.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Guide
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](https://github.com/rodyrafa/challenge/raw/master/imgs/guide.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Api
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A aplicação deverá aceitar um TOKEN que o usuário passará para sua aplicação.
 
-## Learn More
+O link da documentação da API é:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://developer.spotify.com/web-api/endpoint-reference/
