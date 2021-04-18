@@ -1,0 +1,27 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  color: $primary;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+section {
+  margin: 50px 0;
+}
+
+.container {
+  width: 80%;
+  margin: 70px auto;
+}

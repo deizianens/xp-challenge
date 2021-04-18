@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.scss';
 import Navbar from './Navbar';
 import SearchForm from './SearchForm';
 import Media from './Media';
