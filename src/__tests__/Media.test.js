@@ -7,7 +7,7 @@ describe('<Media>', () => {
   });
 
   it('renders media with image', () => {
-    const imageElement = screen.getByAltText('media cover');
+    const imageElement = screen.getByAltText('Nome do álbum');
     expect(imageElement).toBeInTheDocument();
   });
 

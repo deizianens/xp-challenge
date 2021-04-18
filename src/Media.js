@@ -8,7 +8,7 @@ function Media({
 }) {
   return (
     <div className='Media-container'>
-      <img src={cover} className='Media-cover' alt='media cover' />
+      <img src={cover} className='Media-cover' alt={title} />
       <p className='Media-title'>{title}</p>
       <p className='Media-artist'>{artist}</p>
     </div>
