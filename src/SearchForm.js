@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/SearchForm.scss';
 
 function SearchForm() {
   return (
