@@ -1,23 +1,38 @@
+import React, { useState, useEffect } from 'react';
 import './styles/App.scss';
 import Navbar from './Navbar';
 import SearchForm from './SearchForm';
 import Media from './Media';
+import { getToken } from './services/spotifyService';
 
 function App() {
+  const [media, setMedia] = useState([]);
+  const [token, setToken] = useState(undefined);
+
+  useEffect(() => {
+    if (!token) {
+      getToken().then((accessToken) => {
+        setToken(accessToken);
+      });
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
       <div className='container'>
-        <SearchForm />
+        <SearchForm token={token} setMedia={setMedia} />
         <section>
           <h3>Álbuns buscados recentemente</h3>
           <div className='media'>
-            <Media />
-            <Media />
-            <Media />
-            <Media />
-            <Media />
-            <Media />
+            {media &&
+              media.map((item) => (
+                <Media
+                  cover={item.images[1].url}
+                  title={item.name}
+                  artist={item.artists[0].name}
+                />
+              ))}
           </div>
         </section>
       </div>

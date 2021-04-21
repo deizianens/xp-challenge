@@ -21,7 +21,7 @@ export const getToken = () => {
 
 export const getAlbum = (search, token) => {
   return axios(
-    `https://api.spotify.com/v1/search?q=${search}&type=album&limit=10`,
+    `https://api.spotify.com/v1/search?q=${search}&type=album&limit=12`,
     {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },
