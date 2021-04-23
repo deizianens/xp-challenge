@@ -2,6 +2,8 @@
 
 ## Sobre o teste
 
+https://github.com/grupo-xp/challenge/tree/master/react
+
 O desafio utiliza as API’s do Spotify. Features:
 
 - Possibilidade de inserir o nome da música ou album e obter uma lista;
