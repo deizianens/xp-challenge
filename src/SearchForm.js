@@ -10,7 +10,7 @@ function SearchForm({ token, setMedia }) {
   };
 
   useEffect(() => {
-    getAlbum(search, token).then((response) => setMedia(response));
+    getAlbum(token, search).then((response) => setMedia(response));
   }, [search]);
 
   return (

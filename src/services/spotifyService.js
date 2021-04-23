@@ -19,9 +19,9 @@ export const getToken = () => {
     .catch(() => console.log('erro no token'));
 };
 
-export const getAlbum = (search, token) => {
+export const getAlbum = (token, search = 'fresno') => {
   return axios(
-    `https://api.spotify.com/v1/search?q=${search}&type=album&limit=12`,
+    `https://api.spotify.com/v1/search?q=${search}&type=album&limit=10`,
     {
       method: 'GET',
       headers: { Authorization: `Bearer ${token}` },

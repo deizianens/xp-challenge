@@ -3,7 +3,7 @@ import './styles/App.scss';
 import Navbar from './Navbar';
 import SearchForm from './SearchForm';
 import Media from './Media';
-import { getToken } from './services/spotifyService';
+import { getToken, getAlbum } from './services/spotifyService';
 
 function App() {
   const [media, setMedia] = useState([]);
@@ -13,6 +13,7 @@ function App() {
     if (!token) {
       getToken().then((accessToken) => {
         setToken(accessToken);
+        getAlbum(accessToken).then((response) => setMedia(response));
       });
     }
   }, []);
