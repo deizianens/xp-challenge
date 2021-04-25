@@ -16,12 +16,16 @@ function SearchForm({ token, setMedia }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <label for='search' className='Search-label'>
+          Busque por artistas, álbuns ou músicas
+        </label>
         <input
           type='text'
           className='Search-input'
           name='search'
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          placeholder='Comece a escrever...'
         />
       </form>
     </div>
