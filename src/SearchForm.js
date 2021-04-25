@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './styles/SearchForm.scss';
 import { getAlbum } from './services/spotifyService';
 
-function SearchForm({ token, setMedia }) {
+function SearchForm({ token, setMedia, onSearch }) {
   const [search, setSearch] = useState('');
 
   const handleSubmit = (event) => {
@@ -11,6 +11,11 @@ function SearchForm({ token, setMedia }) {
 
   useEffect(() => {
     getAlbum(token, search).then((response) => setMedia(response));
+    if (search === '') {
+      onSearch(search, false);
+    } else {
+      onSearch(search, true);
+    }
   }, [search]);
 
   return (
