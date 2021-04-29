@@ -30,3 +30,21 @@ export const getAlbum = (token, search = 'fresno') => {
     .then((albums) => albums.data.albums.items)
     .catch(() => console.log('erro na requisição'));
 };
+
+
+export const getTracks = async (token, id) => {
+  try {
+    const tracks = await axios(
+      `https://api.spotify.com/v1/albums/${id}/tracks&limit=10`,
+      {
+        method: 'GET',
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+    return tracks.data.albums.items;
+  } catch (e) {
+    return console.log('erro na requisição');
+  }
+    
+
+}
