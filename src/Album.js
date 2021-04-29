@@ -1,10 +1,11 @@
 import React from 'react';
+import Playlist from './Playlist'
 import './styles/Album.scss';
 
 const Album = () => {
   return (
     <div>
-      <h1>Album</h1>
+      <Playlist />
     </div>
   );
 };
