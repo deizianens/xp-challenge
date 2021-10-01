@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .Search-input {
   width: 100%;
@@ -8,7 +8,7 @@
   border-bottom: 1px solid $secondary;
   color: $secondary;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: 15px;
 
   &:focus {
