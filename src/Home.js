@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Navbar from './Navbar';
-import SearchForm from './SearchForm';
-import Media from './Media';
-import { getToken, getAlbum } from './services/spotifyService';
-import './styles/Home.scss';
+import React, { useState, useEffect, useRef } from "react";
+import Navbar from "./Navbar";
+import SearchForm from "./SearchForm";
+import Media from "./Media";
+import { getToken, getAlbum } from "./services/spotifyService";
+import "./styles/Home.scss";
 
 const Home = () => {
   const [media, setMedia] = useState([]);
@@ -26,28 +26,29 @@ const Home = () => {
   };
 
   return (
-    <div>
-      {' '}
+    <div className="content">
       <Navbar />
-      <div className='container'>
-        <SearchForm token={token} setMedia={setMedia} onSearch={onSearch} />
-        <section>
-          <h3>
-            {isSearching
-              ? `Resultados encontrados para "${search.current}"`
-              : 'Álbuns buscados recentemente'}
-          </h3>
-          <div className='media'>
-            {media &&
-              media.map((item) => (
-                <Media
-                  cover={item.images[1].url}
-                  title={item.name}
-                  artist={item.artists[0].name}
-                />
-              ))}
-          </div>
-        </section>
+      <div className="content-wrapper">
+        <div className="container">
+          <SearchForm token={token} setMedia={setMedia} onSearch={onSearch} />
+          <section>
+            <h3>
+              {isSearching
+                ? `Resultados encontrados para "${search.current}"`
+                : "Álbuns buscados recentemente"}
+            </h3>
+            <div className="media">
+              {media &&
+                media.map((item) => (
+                  <Media
+                    cover={item.images[1].url}
+                    title={item.name}
+                    artist={item.artists[0].name}
+                  />
+                ))}
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );

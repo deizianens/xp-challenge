@@ -1,6 +1,17 @@
 @import 'variables';
 
 .container {
-  width: 80%;
-  margin: 70px auto;
+  padding-block: 45px;
+  width: 100%;
+  max-width: 1173px;
+}
+
+.content-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-result  {
+  font-size: 1rem;
 }
