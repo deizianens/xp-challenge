@@ -2,21 +2,20 @@
 
 .media {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 14.125rem);
+  grid-template-columns: repeat(auto-fill, 13rem);
   grid-auto-rows: 1fr;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 
 .Media-container {
-  width: 100%;
+  width: 85%;
   text-align: center;
   margin: 30px 0;
 }
 
 .Media-cover {
-  width: 170px;
-  height: 170px;
+  width: 100%;
 }
 
 .Media-title {
